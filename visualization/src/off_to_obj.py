@@ -3,9 +3,10 @@ import gpytoolbox as gpy
 import numpy as np
 
 def off_to_obj(filename):
-    PATH = os.getcwd()
-    READ_PATH = PATH + '\\mesh\\' + filename + '.off'
-    WRITE_PATH = PATH + '\\mesh\\' + filename + '.obj'
+    THIS_DIR = os.path.dirname(os.path.abspath(__file__))
+    DATA_DIR = os.path.join(THIS_DIR, "..", "..", "meshes")
+    READ_PATH = DATA_DIR + "\\" + filename + '.off'
+    WRITE_PATH = DATA_DIR + "\\" + filename + '.obj'
 
     f = open(READ_PATH, "r")
     
