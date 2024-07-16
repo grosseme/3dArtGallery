@@ -22,7 +22,7 @@ def display_mesh(V, F, R_V = [], R_E = [], intersected = [], C_V = [], S_V = [],
     if len(S_P) != 0:
         ps.register_point_cloud('Skeleton Points Sampling', S_P, radius=0.002)
 
-    if len(S_v) !=0:
+    if len(vecs) !=0:
         ps_mesh.add_vector_quantity("Random ray vector", vecs, enabled=True)
 
     ps.show()
